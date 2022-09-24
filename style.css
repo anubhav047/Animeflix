@@ -105,6 +105,10 @@ body {
   margin-top: 10px;
   text-decoration: none;
 }
+.box:hover {
+  transform: scale(1.08);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
 
 /* #box-1  {
   background: url(img/op.jpeg)no-repeat center center/cover;
