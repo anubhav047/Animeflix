@@ -1,3 +1,3 @@
 # Animeflix
-First attempt to create a basic anime streaming website.<br>
-No content embeded thouugh,XD.
+*First attempt to create a basic anime streaming website.
+*No content embeded though,XD.
