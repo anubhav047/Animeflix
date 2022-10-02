@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animeflix</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/bebas-neue" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,6 +56,9 @@
           <li><a href="contactus.html" target="_blank">Contact Us</a></li>
         </ul>
       </div>
+      <button onclick="toggle()">
+        <img src="img/sun.png" id="toggle"></img>
+      </button>
 
       <section id="home">
         <div class="home-con">
@@ -75,21 +79,23 @@
     </div>
 
     <section id="watch">
-      <h2>Our Content Library</h2>
+      <div id="watch-heading">
+        <h2>Our Content Library</h2>
+      </div>
       <div id="watch-container">
         <div class="box" id="box-1">
           <a href="https://animixplay.to/anime/21/One_Piece" target="_blank"
-            ><img src="img/op.jpeg" />
-            <p>One Piece</p>
+            ><img class="boximg" src="img/op.jpeg" />
+            <p class="boxp">One Piece</p>
           </a>
         </div>
-        <div>
+        <div class="vidbox">
           <video id="vid" controls autoplay loop muted playsinline src="vid/op.mp4"></video>
         </div>
         <div class="box" id="box-2">
           <a href="https://animixplay.to/anime/20/Naruto" target="_blank"
-          ><img src="img/n.jpeg" />
-          <p>Naruto</p>
+          ><img class="boximg"src="img/n.jpeg" />
+          <p class="boxp">Naruto</p>
         </a></a
           >
         </div>
@@ -97,40 +103,78 @@
           <a
             href="https://animixplay.to/anime/5114/Fullmetal_Alchemist__Brotherhood"
             target="_blank"
-            ><img src="img/fmab.jpeg" />
-            <p>FMAB</p></a
+            ><img class="boximg" src="img/fmab.jpeg" />
+            <p class="boxp">FMAB</p></a
           >
         </div>
         <div class="box" id="box-4">
           <a
             href="https://animixplay.to/anime/16498/Shingeki_no_Kyojin"
             target="_blank"
-            ><img src="img/aot.webp" />
-            <p>Attack On Titan</p></a
+            ><img class="boximg" src="img/aot.webp" />
+            <p class="boxp">Attack On Titan</p></a
           >
         </div>
         <div class="box" id="box-5">
           <a href="https://animixplay.to/anime/269/Bleach" target="_blank"
-          ><img src="img/bl.webp" />
-          <p>Bleach</p></a
+          ><img class="boximg" src="img/bl.webp" />
+          <p class="boxp">Bleach</p></a
           >
         </div>
         <div class="box" id="box-6">
           <a href="https://animixplay.to/anime/1535/Death_Note" target="_blank"
-          ><img src="img/deathnote.jpg" />
-          <p>Death Note</p></a
+          ><img class="boximg" src="img/deathnote.jpg" />
+          <p class="boxp">Death Note</p></a
           >
         </div>
         <div class="box" id="box-7">
           <a
             href="https://animixplay.to/anime/40748/Jujutsu_Kaisen"
             target="_blank"
-            ><img src="img/jjk.jpg" />
-            <p>Jujutsu Kaisen</p></a
+            ><img class="boximg" src="img/jjk.jpg" />
+            <p class="boxp">Jujutsu Kaisen</p></a
           >
         </div>
       </div>
       <img id="zoroimg"src="img/zoro.png"></img>
     </section>
   </body>
+  <script>
+    var toggl=false
+      function toggle() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+
+        const boxesimg = document.querySelectorAll('.boximg');
+        const boxesp = document.querySelectorAll('.boxp');
+
+        var a=document.getElementById("toggle");
+        if(toggl==false)
+        {
+          a.src="img/moon.png";
+          boxesimg.forEach(img => {
+            img.style.opacity = '1';
+          });
+          boxesp.forEach(para => {
+            para.style.color = 'black';
+            para.style.fontWeight = 'bold';
+          });
+          document.getElementById("zoroimg").style.opacity='100%';
+          toggl=true;
+        }
+        else{
+          a.src="img/sun.png";
+          boxesimg.forEach(img => {
+            img.style.opacity = '0.8';
+          });
+          boxesp.forEach(para => {
+            para.style.color = 'antiquewhite';
+            para.style.fontWeight = 'none';
+          });
+          document.getElementById("zoroimg").style.opacity='70%';
+          toggl=false;
+        }
+      }
+    
+  </script>
 </html>
