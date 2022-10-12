@@ -37,25 +37,29 @@
       href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="img/logo.ico">
   </head>
   <body>
-    <div class="top-section">
+    <div class="header">
       <div id="navbar">
         <div id="logo">
           <img src="img/logo.png" alt="logo" />
+          <h2 id="title">Animeflix</h2>
         </div>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#watch">Watch</a></li>
-          <li>
-            <a href="about us.html" target="_blank"
-              >About Us</a
-            >
-          </li>
-          <li><a href="contactus.html" target="_blank">Contact Us</a></li>
+          <li><a href="#"><button type="button" name="myButton">Home</button></a></li>
+          <li><a href="#watch"><button type="button" name="myButton">Watch</button></a></li>
+          <li><a href="about us.html" target="_blank"><button type="button" name="myButton">About Us</button></a></li>
+          <li><a href="contactus.html" target="_blank"><button type="button" name="myButton">Contact Us</button></a></li>
+          
         </ul>
       </div>
+
+    </div>
+    <div class="top-section">
       <button onclick="toggle()">
         <img src="img/sun.png" id="toggle"></img>
       </button>
@@ -136,8 +140,14 @@
           >
         </div>
       </div>
+      <div class="footer" id="foo-id">
+        <p>Copyright © Animeflix. All Rights Reserved<br>
+        Watch anime movies and tv shows in high quality for free. Stream your favourite anime series on Animeflix.</p>
+
+      </div>
       <img id="zoroimg"src="img/zoro.png"></img>
     </section>
+    
   </body>
   <script>
     var toggl=false
@@ -160,6 +170,7 @@
             para.style.fontWeight = 'bold';
           });
           document.getElementById("zoroimg").style.opacity='100%';
+          document.getElementById("title").style.color="#000000";
           toggl=true;
         }
         else{
@@ -171,7 +182,9 @@
             para.style.color = 'antiquewhite';
             para.style.fontWeight = 'none';
           });
-          document.getElementById("zoroimg").style.opacity='70%';
+          document.getElementById("zoroimg").style.opacity='100%';
+          document.getElementById("title").style.color="#ffffff";
+
           toggl=false;
         }
       }
