@@ -48,6 +48,9 @@ body {
   right: 10px;
   cursor: pointer;
 }
+#toggle:hover{
+  transform:rotate(60deg);
+}
 /* #navbar::before {
   content: "";
   position: absolute;
@@ -206,6 +209,7 @@ button:hover {
   /* background-color: rgb(234, 147, 75); */
   background-color:#ffa959;
   transition: all 0.3s ease;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 	
 
